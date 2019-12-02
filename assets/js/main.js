@@ -5,6 +5,19 @@ var isMobileScreen = function isMobileScreen() {
 };
 
 var app = {
+  rightBarMobile: function () {
+    $('.btn-toggle-right').on('click', function () {
+      $('html').addClass('open-right-bar');
+    });
+    $('.close-right-bar,.overlay').on('click', function () {
+      $('html').removeClass('open-right-bar');
+    });
+  },
+  search: function () {
+    $('.search__icon').on('click', function () {
+      $(this).closest('form.search').toggleClass('active');
+    });
+  },
   hero: function () {
     $('.hero').slick({
       dots: true,
@@ -123,6 +136,8 @@ var app = {
 };
 $(document).ready(function () {
   // app.validateContact();
+  app.rightBarMobile();
+  app.search();
   app.hero();
   $('.datetimepicker').datetimepicker({
     inline: true,
