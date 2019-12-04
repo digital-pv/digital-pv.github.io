@@ -15,7 +15,9 @@ var app = {
   },
   search: function () {
     $('.search__icon').on('click', function () {
-      $(this).closest('form.search').toggleClass('active');
+      var form = $(this).closest('form.search');
+      form.find('.form-control').focus();
+      form.toggleClass('active');
     });
   },
   hero: function () {
@@ -143,6 +145,7 @@ $(document).ready(function () {
     inline: true,
     sideBySide: true
   });
+  $('select').selectpicker();
   $('[data-toggle="tooltip"]').tooltip();
   var resizeId;
   $(window).resize(function () {
