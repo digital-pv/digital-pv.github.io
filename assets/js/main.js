@@ -5,6 +5,11 @@ var isMobileScreen = function isMobileScreen() {
 };
 
 var app = {
+  init: function () {
+    this.rightBarMobile();
+    this.search();
+    this.hero(); // this.initHeight();
+  },
   rightBarMobile: function () {
     $('.btn-toggle-right').on('click', function () {
       $('html').addClass('open-right-bar');
@@ -15,9 +20,9 @@ var app = {
   },
   search: function () {
     $('.search__icon').on('click', function () {
-      var form = $(this).closest('form.search');
-      form.find('.form-control').focus();
+      var form = $(this).closest('form');
       form.toggleClass('active');
+      form.find('.form-control').focus();
     });
   },
   hero: function () {
@@ -34,10 +39,14 @@ var app = {
           arrows: false,
           dots: false
         }
-      }] // fade: true
-      // adaptiveHeight: true
-
+      }]
     });
+  },
+  initHeight: function () {
+    if (!isMobileScreen()) {
+      var height = $('.main-content').innerHeight();
+      $('.content').css('min-height', height);
+    }
   } // validateContact: function () {
   //     const status = localStorage.getItem('lock-screen');
   //
@@ -115,32 +124,10 @@ var app = {
   //         }
   //     });
   // },
-  // common: function() {
-  //     $( '#dev-modal' ).on('shown.bs.modal', function(event){
-  //         var modal = $(this);
-  //         var button = $(event.relatedTarget);
-  //         var detail = button.closest('.card').find('.detail').clone();
-  //         modal.find('.modal-body').empty().append(detail);
-  //         // modal.find('.modal-body')
-  //     });
-  //     $('.sticky-header').sticky({topSpacing:0});
-  //     $('.navbar-nav-scroll li a,.btn-go-to').click(function(e) {
-  //         e.preventDefault();
-  //         var heightHeader = $('.header').height();
-  //         var element = $(this).attr('href');
-  //         $([document.documentElement, document.body]).animate({
-  //             scrollTop: $(element).offset().top - heightHeader
-  //         }, 500);
-  //     });
-  //
-  // }
 
 };
 $(document).ready(function () {
-  // app.validateContact();
-  app.rightBarMobile();
-  app.search();
-  app.hero();
+  app.init();
   $('.datetimepicker').datetimepicker({
     inline: true,
     sideBySide: true

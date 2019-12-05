@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Danh bạ page | Learning and Development</title>
+    <title>Danh bạ</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
                 <li class="nav-item "><a class="nav-link" href="news.html" data-toggle="tooltip" data-placement="right" title="Tin Tức"><i class="icon-new"></i><span> news</span></a></li>
                 <li class="nav-item active"><a class="nav-link" href="contact.html" data-toggle="tooltip" data-placement="right" title="Danh Bạ"><i class="icon-contact"></i><span> contact</span></a></li>
                 <li class="nav-item "><a class="nav-link" href="services.html" data-toggle="tooltip" data-placement="right" title="Dịch vụ"><i class="icon-service"></i><span> services</span></a></li>
-                <li class="nav-item "><a class="nav-link" href="tool.html" data-toggle="tooltip" data-placement="right" title="công cụ bán hàng"><i class="icon-cart"></i><span> công cụ bán hàng</span></a></li>
+                <li class="nav-item "><a class="nav-link" href="tool.html" data-toggle="tooltip" title="công cụ bán hàng" data-placement="right"><i class="icon-cart"></i><span> công cụ bán hàng</span></a></li>
               </ul>
             </nav>
           </div>
@@ -33,16 +33,15 @@
             <div class="header">
               <div class="header-right d-flex justify-content-end align-items-center">
                 <div class="notification dropdown">
-                  <div class="notification__icon dropdown-toggle" data-toggle="dropdown"><i class="icon-bell"></i><span class="notification__dot"></span>
-                    <div class="dropdown-menu"><a class="dropdown-item no-read" href="#">Chào mừng ngày quốc tế phụ nữ</a><a class="dropdown-item" href="#">Chúc mừng sinh nhật Nguyễn Thị An</a><a class="dropdown-item" href="#">Chúc mừng sinh nhật Nguyễn Thị Hanh</a></div>
-                  </div>
+                  <div class="notification__icon dropdown-toggle" data-toggle="dropdown"><i class="icon-bell"></i><span class="notification__dot"></span></div>
+                  <div class="dropdown-menu"><a class="dropdown-item no-read" href="#">Chào mừng ngày quốc tế phụ nữ</a><a class="dropdown-item" href="#">Chúc mừng sinh nhật Nguyễn Thị An</a><a class="dropdown-item" href="#">Chúc mừng sinh nhật Nguyễn Thị Hanh</a></div>
                 </div>
                 <div class="account dropdown">
                   <div class="ml-3 dropdown-toggle" data-toggle="dropdown">
                     <div class="account__image"><img src="assets/images/avatar.png" alt=""></div>
                     <div class="account__name ml-3">Nguyễn Thị A</div>
-                    <div class="dropdown-menu"><a class="dropdown-item" href="https://google.com">Thông tin cá nhân</a><a class="dropdown-item" href="login.html">Đăng xuất</a></div>
                   </div>
+                  <div class="dropdown-menu"><a class="dropdown-item" href="profile.html">Thông tin cá nhân</a><a class="dropdown-item" href="login.html">Đăng xuất</a></div>
                 </div>
                 <div class="btn btn-toggle-right" data-target="#right-bar"><span></span><span></span><span></span></div>
               </div>
@@ -57,7 +56,7 @@
                   <div class="contact-search__form">
                     <form class="d-flex align-items-center" action="/contact.html" method="post">
                       <div class="contact-search__fields flex-1 d-flex align-items-center">
-                        <div class="contact-search__dropdown pr-3">
+                        <div class="contact-search__dropdown">
                           <select class="selectpicker" title="Chọn khu vực" multiple>
                             <option>Hội sở</option>
                             <option>Miền Bắc</option>
@@ -83,8 +82,281 @@
                 </div>
                 <div class="contact-result">
                   <div class="row">
-                    <div class="col-sm-6 col-md-4">1</div>
-                    <div class="col-sm-6 col-md-8">2</div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="list-contact-category scrollable-area">
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-1" title="Hội đồng Quản trị">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Hội đồng Quản trị</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-1">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-2" title="Kiểm toán nội bộ">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Kiểm toán nội bộ</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-2">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-3" title="Khối Khách hàng Cá nhân">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Khối Khách hàng Cá nhân</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-3">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-4" title="Văn phòng">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Văn phòng</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-4">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-5" title="Khối Khách hàng Cá nhân">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Khối Khách hàng Cá nhân</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-5">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-6" title="Văn phòng">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Văn phòng</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-6">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-7" title="Khối Tái thẩm và Phê duyệt">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Khối Tái thẩm và Phê duyệt</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-7">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-8" title="Khối Vận hành">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Khối Vận hành</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-8">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-9" title="Khối Quản lý và Tái cấu..">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Khối Quản lý và Tái cấu..</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-9">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-10" title="Ban Kiểm soát">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Ban Kiểm soát</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-10">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-11" title="Văn phòng HĐQT">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Văn phòng HĐQT</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-11">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-12" title="Ban Marcom">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Ban Marcom</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-12">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-13" title="Khối Khách hàng Doanh nghiệp">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Khối Khách hàng Doanh nghiệp</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-13">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-14" title="Ban điều hành">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">Ban điều hành</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-14">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-contact-category__item mb-4"><a class="card" href="javascript:void(0)" data-toggle="collapse" data-target="#box-contact-15" title="VP  Đảng uỷ &amp; TC đoàn..">
+                            <div class="card-body">
+                              <div class="d-flex card__item align-items-center">
+                                <div class="flex-1"><i class="icon-contact"></i><span class="card__text">VP  Đảng uỷ & TC đoàn..</span></div><span class="icon--rounder"><i class="icon-arrow-right"></i></span>
+                              </div>
+                            </div></a>
+                          <div class="collapse" id="box-contact-15">
+                            <div class="list-contact-category__title"><strong>Trung tâm thẻ</strong>
+                              <div class="list-contact-category__tree">
+                                <div class="list-contact-category__text">Phòng kế toán phát hành</div>
+                                <div class="list-contact-category__text">Thanh toán thẻ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                      <div class="list-contact">
+                        <div class="list-contact__item d-flex align-items-center row">
+                          <div class="list-contact__info d-flex align-items-center col-md-6"><a class="list-contact__avatar mr-3" href="contact-detail.html"><img src="assets/images/avatar.png"></a><a class="list-contact__text" href="contact-detail.html">
+                              <div class="list-contact__name strong">Nguyễn Đình Lâm</div>
+                              <div class="list-contact__position">Chủ tịch Hội đồng quản trị</div></a></div>
+                          <div class="list-contact__phone col-md-3">Máy lẻ: (4)-6287</div>
+                          <div class="list-contact__mobile col-md-3"><span><i class="icon-phone"></i>090 340 8287</span></div>
+                        </div>
+                        <div class="list-contact__item d-flex align-items-center row">
+                          <div class="list-contact__info d-flex align-items-center col-md-6"><a class="list-contact__avatar mr-3" href="contact-detail.html"><img src="assets/images/avatar.png"></a><a class="list-contact__text" href="contact-detail.html">
+                              <div class="list-contact__name strong">Trịnh Hữu Hiền</div>
+                              <div class="list-contact__position">Thành viên Hội đồng quản trị</div></a></div>
+                          <div class="list-contact__phone col-md-3">Máy lẻ: (4)-6287</div>
+                          <div class="list-contact__mobile col-md-3"><span><i class="icon-phone"></i>090 340 8287</span></div>
+                        </div>
+                        <div class="list-contact__item d-flex align-items-center row">
+                          <div class="list-contact__info d-flex align-items-center col-md-6"><a class="list-contact__avatar mr-3" href="contact-detail.html"><img src="assets/images/avatar.png"></a><a class="list-contact__text" href="contact-detail.html">
+                              <div class="list-contact__name strong">Đoàn Minh Mẫn</div>
+                              <div class="list-contact__position">Thành viên Hội đồng quản trị</div></a></div>
+                          <div class="list-contact__phone col-md-3">Máy lẻ: (4)-6287</div>
+                          <div class="list-contact__mobile col-md-3"><span><i class="icon-phone"></i>090 340 8287</span></div>
+                        </div>
+                        <div class="list-contact__item d-flex align-items-center row">
+                          <div class="list-contact__info d-flex align-items-center col-md-6"><a class="list-contact__avatar mr-3" href="contact-detail.html"><img src="assets/images/avatar.png"></a><a class="list-contact__text" href="contact-detail.html">
+                              <div class="list-contact__name strong">Nguyễn Hoàng Nam</div>
+                              <div class="list-contact__position"> Hội đồng quản trị kiêm TGD</div></a></div>
+                          <div class="list-contact__phone col-md-3">Máy lẻ: (4)-6287</div>
+                          <div class="list-contact__mobile col-md-3"><span><i class="icon-phone"></i>090 340 8287</span></div>
+                        </div>
+                        <div class="list-contact__item d-flex align-items-center row">
+                          <div class="list-contact__info d-flex align-items-center col-md-6"><a class="list-contact__avatar mr-3" href="contact-detail.html"><img src="assets/images/avatar.png"></a><a class="list-contact__text" href="contact-detail.html">
+                              <div class="list-contact__name strong">Nguyễn Đình Lâm</div>
+                              <div class="list-contact__position">Chủ tịch Hội đồng quản trị</div></a></div>
+                          <div class="list-contact__phone col-md-3">Máy lẻ: (4)-6287</div>
+                          <div class="list-contact__mobile col-md-3"><span><i class="icon-phone"></i>090 340 8287</span></div>
+                        </div>
+                        <div class="list-contact__item d-flex align-items-center row">
+                          <div class="list-contact__info d-flex align-items-center col-md-6"><a class="list-contact__avatar mr-3" href="contact-detail.html"><img src="assets/images/avatar.png"></a><a class="list-contact__text" href="contact-detail.html">
+                              <div class="list-contact__name strong">Nguyễn Đình Lâm</div>
+                              <div class="list-contact__position">Chủ tịch Hội đồng quản trị</div></a></div>
+                          <div class="list-contact__phone col-md-3">Máy lẻ: (4)-6287</div>
+                          <div class="list-contact__mobile col-md-3"><span><i class="icon-phone"></i>090 340 8287</span></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
